@@ -1,6 +1,7 @@
 
 var app = angular.module('angular-starter', [
-	'ui.router'
+	'ui.router',
+	'dndLists'
 ]);
 
 app.config(function($stateProvider, $urlRouterProvider){

@@ -20,12 +20,13 @@ gulp.task('watch', ['js'], function () {
   gulp.watch('public/js/**/*.js', ['js'])
 });
 
-// starts a web server on port 
+// starts a web server on port 8080
 gulp.task('webserver', function() {
 	connect.server({
 		root: 'public',
 		livereload: true
 	});
 });
- 
+
+// default to webserver when running `gulp`
 gulp.task('default', ['webserver']);
