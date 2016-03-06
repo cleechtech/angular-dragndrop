@@ -15,12 +15,14 @@ gulp.task('js', function () {
     .pipe(gulp.dest('.'))
 });
 
-// creates bundle and concats files together
+// concats all javascript into one new file `public/bundle.js`
+// run with `gulp watch`
 gulp.task('watch', ['js'], function () {
   gulp.watch('public/js/**/*.js', ['js'])
 });
 
 // starts a web server on port 8080
+// run with `gulp webserver` or `gulp`
 gulp.task('webserver', function() {
 	connect.server({
 		root: 'public',
